@@ -1,1 +1,2 @@
-# Project Icarus
+# Zentra
+## An open source meditation app for iOS
