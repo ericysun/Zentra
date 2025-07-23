@@ -10,5 +10,7 @@ Zentra is a minimalist meditation app for iOS, designed to help users return to 
 -  Clean, distraction-free interface  
 -  No annoying mobile ads
 
+----------
+
 # Feedback: Bug and Feature Suggestion
 https://bit.ly/ZentraFeedback
