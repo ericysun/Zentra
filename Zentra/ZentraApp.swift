@@ -2,7 +2,7 @@
 //  ZentraApp.swift
 //  Zentra
 //
-//  Created by Guest    on 7/24/25.
+//  Created by Eric Sun on 7/24/25.
 //
 
 import SwiftUI
