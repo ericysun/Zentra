@@ -11,15 +11,21 @@ import UIKit
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            HStack(spacing: 20) {
-                NavigationLink(destination: SleepPage()) {
-                    SleepButton()
-                }
-                NavigationLink(destination: MeditatePage()) {
-                    MeditateButton()
-                }
-                NavigationLink(destination: WakeupPage()) {
-                    WakeupButton()
+            VStack(spacing: 30) {
+                Text("Good Morning")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                
+                HStack(spacing: 20) {
+                    NavigationLink(destination: SleepPage()) {
+                        SleepButton()
+                    }
+                    NavigationLink(destination: MeditatePage()) {
+                        MeditateButton()
+                    }
+                    NavigationLink(destination: WakeupPage()) {
+                        WakeupButton()
+                    }
                 }
             }
             .padding()
