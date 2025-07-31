@@ -16,6 +16,19 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.white)
                 
+                VStack(spacing: 8) {
+                    Text("If you want to conquer the anxiety of life, live in the moment, live in the breath.")
+                        .font(.title2)
+                        .italic()
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(.white)
+                    
+                    Text("― Amit Ray")
+                        .font(.subheadline)
+                        .foregroundStyle(.white.opacity(0.8))
+                }
+                .padding(.horizontal)
+                
                 HStack(spacing: 20) {
                     NavigationLink(destination: SleepPage()) {
                         SleepButton()
