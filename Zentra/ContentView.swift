@@ -10,18 +10,13 @@ import UIKit
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Start a Serenity Session")
-                .foregroundStyle(.white)
-                .padding()
-                .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
-            
+        HStack(spacing: 20) {
             SleepButton()
+                .frame(maxWidth: .infinity)
             MeditateButton()
+                .frame(maxWidth: .infinity)
             WakeupButton()
+                .frame(maxWidth: .infinity)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -34,10 +29,16 @@ struct SleepButton: View {
         Button(action: {
             // Starts a sleep aid audio
         }) {
-            Label("Sleep", systemImage: "bed.double")
-                .foregroundStyle(.white)
-                .padding()
-                .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
+            VStack {
+                Image(systemName: "bed.double")
+                    .font(.title2)
+                Text("Sleep")
+                    .font(.caption)
+            }
+            .foregroundStyle(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
         }
     }
 }
@@ -47,10 +48,16 @@ struct MeditateButton: View {
         Button(action: {
             // start meditation audio
         }) {
-            Label("Meditate", systemImage: "apple.meditate")
-                .foregroundStyle(.white)
-                .padding()
-                .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
+            VStack {
+                Image(systemName: "apple.meditate")
+                    .font(.title2)
+                Text("Meditate")
+                    .font(.caption)
+            }
+            .foregroundStyle(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
         }
     }
 }
@@ -60,10 +67,16 @@ struct WakeupButton: View {
         Button(action: {
             // start wakeup audio
         }) {
-            Label("Wakeup", systemImage: "sun.horizon")
-                .foregroundStyle(.white)
-                .padding()
-                .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
+            VStack {
+                Image(systemName: "sun.horizon")
+                    .font(.title2)
+                Text("Wakeup")
+                    .font(.caption)
+            }
+            .foregroundStyle(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
         }
     }
 }
