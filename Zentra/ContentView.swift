@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import AVFoundation
 
 struct ContentView: View {
     let quotes = [
@@ -147,17 +148,66 @@ struct SleepPage: View {
 }
 
 struct MeditatePage: View {
+    @State private var audioPlayer: AVAudioPlayer?
+    @State private var isPlaying = false
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             Text("Meditation Session")
                 .font(.largeTitle)
                 .foregroundStyle(.white)
             Text("Find your inner peace")
                 .foregroundStyle(.white)
+            
+            Button(action: {
+                if isPlaying {
+                    pauseAudio()
+                } else {
+                    playAudio()
+                }
+            }) {
+                Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                    .font(.system(size: 80))
+                    .foregroundStyle(.white)
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 164/255, green: 204/255, blue: 156/255))
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            setupAudio()
+        }
+        .onDisappear {
+            stopAudio()
+        }
+    }
+    
+    private func setupAudio() {
+        if let url = Bundle.main.url(forResource: "meditation1", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print("Error loading audio: \(error)")
+            }
+        }
+    }
+    
+    private func playAudio() {
+        if let player = audioPlayer {
+            player.play()
+            isPlaying = true
+        }
+    }
+    
+    private func pauseAudio() {
+        audioPlayer?.pause()
+        isPlaying = false
+    }
+    
+    private func stopAudio() {
+        audioPlayer?.stop()
+        audioPlayer?.currentTime = 0
+        isPlaying = false
     }
 }
 
