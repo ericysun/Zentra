@@ -75,6 +75,9 @@ struct ContentView: View {
                     NavigationLink(destination: MeditatePage()) {
                         MeditateButton()
                     }
+                    NavigationLink(destination: GuidedPage()) {
+                        GuidedButton()
+                    }
                     NavigationLink(destination: SleepPage()) {
                         SleepButton()
                     }
@@ -108,6 +111,21 @@ struct MeditateButton: View {
             Image(systemName: "apple.meditate")
                 .font(.title2)
             Text("Meditate")
+                .font(.caption)
+        }
+        .foregroundStyle(.white)
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 8))
+    }
+}
+
+struct GuidedButton: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "person.line.dotted.person")
+                .font(.title2)
+            Text("Guided")
                 .font(.caption)
         }
         .foregroundStyle(.white)
@@ -280,6 +298,21 @@ struct playerPage: View {
         audioPlayer?.stop()
         audioPlayer?.currentTime = 0
         isPlaying = false
+    }
+}
+
+struct GuidedPage: View {
+    var body: some View {
+        VStack {
+            Text("Guided Session")
+                .font(.largeTitle)
+                .foregroundStyle(.white)
+            Text("Guide a meditation with soothing coach audio")
+                .foregroundStyle(.white)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(red: 164/255, green: 204/255, blue: 156/255))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
