@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "ZentraLogo.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "author" : "Eric Sun",
+    "version" : 1
+  }
+} 

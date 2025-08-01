@@ -35,6 +35,18 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
+                VStack(spacing: 10) {
+                    Image("ZentraLogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80, height: 80)
+                    
+                    Text("Zentra")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                }
+                
                 Text(greeting)
                     .font(.largeTitle)
                     .foregroundStyle(.white)
