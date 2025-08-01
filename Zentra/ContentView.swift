@@ -69,14 +69,17 @@ struct ContentView: View {
                 }
                 
                 HStack(spacing: 20) {
-                    NavigationLink(destination: WakeupPage()) {
-                        WakeupButton()
-                    }
                     NavigationLink(destination: MeditatePage()) {
                         MeditateButton()
                     }
                     NavigationLink(destination: GuidedPage()) {
                         GuidedButton()
+                    }
+                }
+                
+                HStack(spacing: 20) {
+                    NavigationLink(destination: WakeupPage()) {
+                        WakeupButton()
                     }
                     NavigationLink(destination: SleepPage()) {
                         SleepButton()
