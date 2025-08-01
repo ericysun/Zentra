@@ -9,10 +9,22 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
+    var greeting: String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        if hour >= 0 && hour <= 11 {
+            return "Good Morning"
+        } else if hour >= 12 && hour <= 16 {
+            return "Good Afternoon"
+        } else {
+            return "Good Evening"
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
-                Text("Good Morning")
+                Text(greeting)
                     .font(.largeTitle)
                     .foregroundStyle(.white)
                 
@@ -30,14 +42,14 @@ struct ContentView: View {
                 .padding(.horizontal)
                 
                 HStack(spacing: 20) {
-                    NavigationLink(destination: SleepPage()) {
-                        SleepButton()
+                    NavigationLink(destination: WakeupPage()) {
+                        WakeupButton()
                     }
                     NavigationLink(destination: MeditatePage()) {
                         MeditateButton()
                     }
-                    NavigationLink(destination: WakeupPage()) {
-                        WakeupButton()
+                    NavigationLink(destination: SleepPage()) {
+                        SleepButton()
                     }
                 }
             }
