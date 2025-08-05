@@ -13,6 +13,10 @@ struct ContentView: View {
         ["If you want to conquer the anxiety of life, live in the moment, live in the breath.", "Amit Ray"],
         ["Peace comes from within. Do not seek it without.", "Buddha"],
         ["Happiness is not something ready made. It comes from your own actions.", "Dalai Lama"]
+        ["The quieter you become, the more you are able to hear.","Rumi"],
+        ["Meditation is bringing the mind home.","Sogyal Rinpoche"],
+        ["I took a deep breath and listened to the old brag of my heart. I am, I am, I am.","Sylvia Plath"],
+        ["What lies behind us and what lies before us are tiny matters compared to what lies within us.","Ralph Waldo Emerson"]
     ]
     
     @State private var currentQuote = ["", ""]
