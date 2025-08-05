@@ -17,6 +17,8 @@ struct ContentView: View {
         ["Meditation is bringing the mind home.","Sogyal Rinpoche"],
         ["I took a deep breath and listened to the old brag of my heart. I am, I am, I am.","Sylvia Plath"],
         ["What lies behind us and what lies before us are tiny matters compared to what lies within us.","Ralph Waldo Emerson"]
+        ["The more man meditates upon good thoughts, the better will be his world and the world at large.","Confucius"]
+        ["Be where you are; otherwise you will miss your life.","Buddha"]
     ]
     
     @State private var currentQuote = ["", ""]
