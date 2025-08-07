@@ -22,16 +22,12 @@ struct MeditatePage: View {
                     MeditationOptionButton(title: "Mindfulness Meditation", subtitle: "Focus on the present moment", icon: "brain.head.profile")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "Breathing Exercise")) {
+                NavigationLink(destination: playerPage(audioFile: "meditation2", title: "Breathing Exercise")) {
                     MeditationOptionButton(title: "Breathing Exercise", subtitle: "Deep breathing techniques", icon: "lungs.fill")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "Body Scan")) {
+                NavigationLink(destination: playerPage(audioFile: "meditation3", title: "Body Scan")) {
                     MeditationOptionButton(title: "Body Scan", subtitle: "Progressive relaxation", icon: "figure.mind.and.body")
-                }
-                
-                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "Loving Kindness")) {
-                    MeditationOptionButton(title: "Loving Kindness", subtitle: "Cultivate compassion", icon: "heart.fill")
                 }
             }
             .padding(.horizontal)
