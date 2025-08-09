@@ -19,7 +19,7 @@ struct WakeupPage: View {
             
             VStack(spacing: 15) {
                 NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Morning Ripples")) {
-                    MeditationOptionButton(title: "Morning Ripples", subtitle: "Focus on the present moment", icon: "brain.head.profile")
+                    MeditationOptionButton(title: "Morning Ripples", subtitle: "Focus on the present moment", icon: "water.waves")
                 }
                 
                 NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Golden Hour")) {
