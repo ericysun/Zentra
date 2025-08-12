@@ -19,16 +19,16 @@ struct GuidedPage: View {
                 .font(.title2)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "Guided Mindfulness")) {
-                    MeditationOptionButton(title: "Guided Mindfulness", subtitle: "Present moment awareness", icon: "brain.head.profile", audioFileName: "meditation1")
+                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "6-Minute Breath Awareness")) {
+                    MeditationOptionButton(title: "6-Minute Breath Awareness", subtitle: "Melbourne Mindfulness Centre", icon: "brain.head.profile", audioFileName: "meditation1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "meditation2", title: "Guided Breathing")) {
-                    MeditationOptionButton(title: "Guided Breathing", subtitle: "Deep breathing techniques", icon: "lungs.fill", audioFileName: "meditation2")
+                NavigationLink(destination: playerPage(audioFile: "meditation2", title: "Five Minute Breathing")) {
+                    MeditationOptionButton(title: "Five Minute Breathing", subtitle: "UCLA Mindful Awareness Center", icon: "lungs.fill", audioFileName: "meditation2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "meditation3", title: "Guided Relaxation")) {
-                    MeditationOptionButton(title: "Guided Relaxation", subtitle: "Progressive muscle relaxation", icon: "figure.mind.and.body", audioFileName: "meditation3")
+                NavigationLink(destination: playerPage(audioFile: "meditation3", title: "The Breathing Space")) {
+                    MeditationOptionButton(title: "The Breathing Space", subtitle: "Vidyamala Burch", icon: "figure.mind.and.body", audioFileName: "meditation3")
                 }
             }
             .padding(.horizontal)
