@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct GuidedPage: View {
     var body: some View {
@@ -13,21 +14,21 @@ struct GuidedPage: View {
                 .font(.largeTitle)
                 .foregroundStyle(.white)
             
-            Text("Guide a meditation with soothing coach audio")
+            Text("Choose your guided meditation")
                 .foregroundStyle(.white)
                 .font(.title2)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: playerPage(audioFile: "guided1", title: "Guided 1")) {
-                    MeditationOptionButton(title: "Guided 1", subtitle: "Focus on the present moment", icon: "brain.head.profile")
+                NavigationLink(destination: playerPage(audioFile: "meditation1", title: "Guided Mindfulness")) {
+                    MeditationOptionButton(title: "Guided Mindfulness", subtitle: "Present moment awareness", icon: "brain.head.profile", audioFileName: "meditation1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "guided2", title: "Guided 2")) {
-                    MeditationOptionButton(title: "Guided 2", subtitle: "Deep breathing techniques", icon: "lungs.fill")
+                NavigationLink(destination: playerPage(audioFile: "meditation2", title: "Guided Breathing")) {
+                    MeditationOptionButton(title: "Guided Breathing", subtitle: "Deep breathing techniques", icon: "lungs.fill", audioFileName: "meditation2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "guided3", title: "Guided 3")) {
-                    MeditationOptionButton(title: "Guided 3", subtitle: "Progressive relaxation", icon: "figure.mind.and.body")
+                NavigationLink(destination: playerPage(audioFile: "meditation3", title: "Guided Relaxation")) {
+                    MeditationOptionButton(title: "Guided Relaxation", subtitle: "Progressive muscle relaxation", icon: "figure.mind.and.body", audioFileName: "meditation3")
                 }
             }
             .padding(.horizontal)

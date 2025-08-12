@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct WakeupPage: View {
     var body: some View {
@@ -13,21 +14,21 @@ struct WakeupPage: View {
                 .font(.largeTitle)
                 .foregroundStyle(.white)
             
-            Text("Start your day with energy")
+            Text("Choose your morning energy")
                 .foregroundStyle(.white)
                 .font(.title2)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Morning Ripples")) {
-                    MeditationOptionButton(title: "Morning Ripples", subtitle: "Focus on the present moment", icon: "water.waves")
+                NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Morning Energy")) {
+                    MeditationOptionButton(title: "Morning Energy", subtitle: "Start your day with vitality", icon: "sun.horizon", audioFileName: "wakeup1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Golden Hour")) {
-                    MeditationOptionButton(title: "Golden Hour", subtitle: "Deep breathing techniques", icon: "lungs.fill")
+                NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Rise and Shine")) {
+                    MeditationOptionButton(title: "Rise and Shine", subtitle: "Energizing morning sounds", icon: "sun.max", audioFileName: "wakeup2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "wakeup3", title: "Rise and Shine")) {
-                    MeditationOptionButton(title: "Rise and Shine", subtitle: "Progressive relaxation", icon: "figure.mind.and.body")
+                NavigationLink(destination: playerPage(audioFile: "wakeup3", title: "Dawn Awakening")) {
+                    MeditationOptionButton(title: "Dawn Awakening", subtitle: "Gentle morning meditation", icon: "sunrise", audioFileName: "wakeup3")
                 }
             }
             .padding(.horizontal)

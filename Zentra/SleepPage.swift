@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SleepPage: View {
     var body: some View {
@@ -13,21 +14,21 @@ struct SleepPage: View {
                 .font(.largeTitle)
                 .foregroundStyle(.white)
             
-            Text("Choose your Sleep")
+            Text("Choose your sleep aid")
                 .foregroundStyle(.white)
                 .font(.title2)
             
             VStack(spacing: 15) {
                 NavigationLink(destination: playerPage(audioFile: "sleep1", title: "Gentle Sleep")) {
-                    MeditationOptionButton(title: "Gentle Sleep", subtitle: "Focus on the present moment", icon: "brain.head.profile")
+                    MeditationOptionButton(title: "Gentle Sleep", subtitle: "Soothing sleep sounds", icon: "bed.double", audioFileName: "sleep1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "sleep2", title: "Off to the Stars")) {
-                    MeditationOptionButton(title: "Off to the Stars", subtitle: "Deep breathing techniques", icon: "lungs.fill")
+                NavigationLink(destination: playerPage(audioFile: "sleep2", title: "Deep Rest")) {
+                    MeditationOptionButton(title: "Deep Rest", subtitle: "Peaceful night sounds", icon: "moon.stars", audioFileName: "sleep2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "sleep3", title: "The Night Sky")) {
-                    MeditationOptionButton(title: "The Night Sky", subtitle: "Progressive relaxation", icon: "figure.mind.and.body")
+                NavigationLink(destination: playerPage(audioFile: "sleep3", title: "Dreamy Slumber")) {
+                    MeditationOptionButton(title: "Dreamy Slumber", subtitle: "Calming bedtime meditation", icon: "cloud.moon", audioFileName: "sleep3")
                 }
             }
             .padding(.horizontal)
