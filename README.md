@@ -1,5 +1,5 @@
 # Zentra
-## An open source meditation app for iOS
+## An Open-Source Meditation App for iOS
 <img width="1360" height="987" alt="ZentraDemoBanner" src="https://github.com/user-attachments/assets/1fdd188d-09d4-45c2-9925-a8725b982340" />
 
 ## Features
@@ -9,10 +9,10 @@
 -  Works fully offline: all recordings stored on your device.
 -  No ads, no subscriptions, and no paywalls. Just peace.
 
-## Demo
+## App Demo
 https://github.com/user-attachments/assets/37567afe-0e95-41d8-88d7-677505daf694
 
-## Installation (XCode Simulator)
+## Installation
 You can install and run Zentra on your iPhone using the Xcode App Simulator.
 
 ### Requirements
@@ -31,7 +31,7 @@ You can install and run Zentra on your iPhone using the Xcode App Simulator.
 - Or enable wireless debugging in Xcode → Devices and Simulators
 - In the top toolbar, click the device dropdown and choose your iPhone.
 - Press ⌘R to build and run the app on your device.
-- Choose Trust when your iPhone asks you to trust the developer certificate.
+- Choose "Trust" when your iPhone asks you to trust the developer certificate.
 
 # Feedback: Bug and Feature Suggestion
 https://bit.ly/ZentraFeedback
