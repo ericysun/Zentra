@@ -9,6 +9,9 @@
 -  Works fully offline: all recordings stored on your device.
 -  No ads, no subscriptions, and no paywalls. Just peace.
 
+## Demo
+https://github.com/user-attachments/assets/37567afe-0e95-41d8-88d7-677505daf694
+
 ## Installation (XCode Simulator)
 You can install and run Zentra on your iPhone using the Xcode App Simulator.
 
