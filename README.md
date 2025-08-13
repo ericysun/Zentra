@@ -9,5 +9,26 @@
 -  Works fully offline: all recordings stored on your device.
 -  No ads, no subscriptions, and no paywalls. Just peace.
 
+## Installation (XCode Simulator)
+You can install and run Zentra on your iPhone using the Xcode App Simulator.
+
+### Requirements
+- Mac w/ Xcode Version 15+
+- An iPhone w/ iOS 17+
+
+### Steps
+
+1. Clone & Open Repository
+   ```bash
+   git clone https://github.com/yourusername/zentra.git
+   cd zentra
+   open Zentra.xcodeproj
+2. Connect Your iPhone
+- Plug your device into your Mac with a USB cable
+- Or enable wireless debugging in Xcode → Devices and Simulators
+- In the top toolbar, click the device dropdown and choose your iPhone.
+- Press ⌘R to build and run the app on your device.
+- Choose Trust when your iPhone asks you to trust the developer certificate.
+
 # Feedback: Bug and Feature Suggestion
 https://bit.ly/ZentraFeedback
