@@ -19,16 +19,16 @@ struct WakeupPage: View {
                 .font(.title2)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Morning Energy")) {
-                    MeditationOptionButton(title: "Morning Energy", subtitle: "Start your day with vitality", icon: "sun.horizon", audioFileName: "wakeup1")
+                NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Forest Sunrise Ambience")) {
+                    MeditationOptionButton(title: "Forest Sunrise Ambience", subtitle: "James Carter-Metriko", icon: "sun.horizon", audioFileName: "wakeup1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Rise and Shine")) {
-                    MeditationOptionButton(title: "Rise and Shine", subtitle: "Energizing morning sounds", icon: "sun.max", audioFileName: "wakeup2")
+                NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Morning Relaxing")) {
+                    MeditationOptionButton(title: "Morning Relaxing", subtitle: "Shakib Hasan-Onetent", icon: "sun.max", audioFileName: "wakeup2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "wakeup3", title: "Dawn Awakening")) {
-                    MeditationOptionButton(title: "Dawn Awakening", subtitle: "Gentle morning meditation", icon: "sunrise", audioFileName: "wakeup3")
+                NavigationLink(destination: playerPage(audioFile: "wakeup3", title: "Dreamy Slow EDM")) {
+                    MeditationOptionButton(title: "Dreamy Slow EDM", subtitle: "AllWorldMusic", icon: "sunrise", audioFileName: "wakeup3")
                 }
             }
             .padding(.horizontal)
