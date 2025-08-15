@@ -19,16 +19,16 @@ struct SleepPage: View {
                 .font(.title2)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: playerPage(audioFile: "sleep1", title: "Gentle Sleep")) {
-                    MeditationOptionButton(title: "Gentle Sleep", subtitle: "Soothing sleep sounds", icon: "bed.double", audioFileName: "sleep1")
+                NavigationLink(destination: playerPage(audioFile: "sleep1", title: "Peaceful Sleep")) {
+                    MeditationOptionButton(title: "Peaceful Sleep", subtitle: "Zakhar Valah-Good_B_Music", icon: "bed.double", audioFileName: "sleep1")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "sleep2", title: "Deep Rest")) {
-                    MeditationOptionButton(title: "Deep Rest", subtitle: "Peaceful night sounds", icon: "moon.stars", audioFileName: "sleep2")
+                NavigationLink(destination: playerPage(audioFile: "sleep2", title: "Calming Ambience")) {
+                    MeditationOptionButton(title: "Calming Ambience", subtitle: "Allicante", icon: "moon.stars", audioFileName: "sleep2")
                 }
                 
-                NavigationLink(destination: playerPage(audioFile: "sleep3", title: "Dreamy Slumber")) {
-                    MeditationOptionButton(title: "Dreamy Slumber", subtitle: "Calming bedtime meditation", icon: "cloud.moon", audioFileName: "sleep3")
+                NavigationLink(destination: playerPage(audioFile: "sleep3", title: "Healing Sleep Atmosphere")) {
+                    MeditationOptionButton(title: "Healing Sleep Atmosphere", subtitle: "Allicante", icon: "cloud.moon", audioFileName: "sleep3")
                 }
             }
             .padding(.horizontal)
