@@ -28,7 +28,7 @@ You can install and run Zentra on your iPhone using the Xcode App Simulator.
 
 1. Clone & Open Repository
    ```bash
-   git clone https://github.com/yourusername/zentra.git
+   git clone https://github.com/ericysun/zentra
    cd zentra
    open Zentra.xcodeproj
 2. Connect Your iPhone
