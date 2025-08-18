@@ -13,6 +13,9 @@ struct playerPage: View {
     
     @State private var audioPlayer: AVAudioPlayer?
     @State private var isPlaying = false
+    @State private var currentTime: TimeInterval = 0
+    @State private var duration: TimeInterval = 0
+    @State private var progressTimer: Timer?
     
     var body: some View {
         VStack {
@@ -51,6 +54,26 @@ struct playerPage: View {
                         .font(.title3)
                 }
                 
+                // Progress bar
+                VStack(spacing: 8) {
+                    ProgressView(value: duration > 0 ? currentTime / duration : 0)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                        .scaleEffect(y: 2)
+                    
+                    HStack {
+                        Text(formatTime(currentTime))
+                            .font(.caption)
+                            .foregroundStyle(.white.opacity(0.8))
+                        
+                        Spacer()
+                        
+                        Text(formatTime(duration))
+                            .font(.caption)
+                            .foregroundStyle(.white.opacity(0.8))
+                    }
+                }
+                .padding(.horizontal, 20)
+                
                 // Play/Pause button
                 Button(action: {
                     if isPlaying {
@@ -77,6 +100,7 @@ struct playerPage: View {
         }
         .onDisappear {
             stopAudio()
+            progressTimer?.invalidate()
         }
     }
     
@@ -84,6 +108,7 @@ struct playerPage: View {
         if let url = Bundle.main.url(forResource: audioFile, withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+                duration = audioPlayer?.duration ?? 0
             } catch {
                 print("Error loading audio: \(error)")
             }
@@ -94,18 +119,37 @@ struct playerPage: View {
         if let player = audioPlayer {
             player.play()
             isPlaying = true
+            startProgressTimer()
         }
     }
     
     private func pauseAudio() {
         audioPlayer?.pause()
         isPlaying = false
+        progressTimer?.invalidate()
     }
     
     private func stopAudio() {
         audioPlayer?.stop()
         audioPlayer?.currentTime = 0
         isPlaying = false
+        currentTime = 0
+        progressTimer?.invalidate()
+    }
+    
+    private func startProgressTimer() {
+        progressTimer?.invalidate()
+        progressTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if let player = audioPlayer {
+                currentTime = player.currentTime
+            }
+        }
+    }
+    
+    private func formatTime(_ time: TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%d:%02d", minutes, seconds)
     }
 }
 
