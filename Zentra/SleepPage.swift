@@ -8,6 +8,8 @@ import SwiftUI
 import AVFoundation
 
 struct SleepPage: View {
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack(spacing: 25) {
             Text("Sleep Session")
@@ -36,6 +38,22 @@ struct SleepPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 164/255, green: 204/255, blue: 156/255))
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
+                        Text("Back")
+                            .font(.body)
+                    }
+                    .foregroundStyle(.white)
+                }
+            }
+        }
     }
 }
 

@@ -16,6 +16,7 @@ struct playerPage: View {
     @State private var currentTime: TimeInterval = 0
     @State private var duration: TimeInterval = 0
     @State private var progressTimer: Timer?
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack {
@@ -116,6 +117,24 @@ struct playerPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 164/255, green: 204/255, blue: 156/255))
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
+                        Text("Back")
+                            .font(.body)
+                    }
+                    .foregroundStyle(.white)
+                }
+            }
+        }
         .onAppear {
             setupAudio()
         }
