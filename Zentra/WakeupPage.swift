@@ -18,17 +18,17 @@ struct WakeupPage: View {
                 .foregroundStyle(.white)
                 .font(.title2)
             
-            VStack(spacing: 15) {
+            VStack(spacing: 20) {
                 NavigationLink(destination: playerPage(audioFile: "wakeup1", title: "Forest Sunrise Ambience")) {
-                    MeditationOptionButton(title: "Forest Sunrise Ambience", subtitle: "James Carter-Metriko", icon: "sun.horizon", audioFileName: "wakeup1")
+                    MeditationOptionButton(title: "Forest Sunrise Ambience", subtitle: "James Carter-Metriko", icon: "sun.horizon", audioFileName: "wakeup1", useImage: true)
                 }
                 
                 NavigationLink(destination: playerPage(audioFile: "wakeup2", title: "Morning Relaxing")) {
-                    MeditationOptionButton(title: "Morning Relaxing", subtitle: "Shakib Hasan-Onetent", icon: "sun.max", audioFileName: "wakeup2")
+                    MeditationOptionButton(title: "Morning Relaxing", subtitle: "Shakib Hasan-Onetent", icon: "sun.max", audioFileName: "wakeup2", useImage: true)
                 }
                 
                 NavigationLink(destination: playerPage(audioFile: "wakeup3", title: "Dreamy Slow EDM")) {
-                    MeditationOptionButton(title: "Dreamy Slow EDM", subtitle: "AllWorldMusic", icon: "sunrise", audioFileName: "wakeup3")
+                    MeditationOptionButton(title: "Dreamy Slow EDM", subtitle: "AllWorldMusic", icon: "sunrise", audioFileName: "wakeup3", useImage: true)
                 }
             }
             .padding(.horizontal)
@@ -36,37 +36,6 @@ struct WakeupPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 164/255, green: 204/255, blue: 156/255))
         .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct WakeupOptionButton: View {
-    let title: String
-    let subtitle: String
-    let icon: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: icon)
-                .font(.title2)
-                .foregroundStyle(.white)
-                .frame(width: 40)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                Text(subtitle)
-                    .font(.caption)
-                    .foregroundStyle(.white.opacity(0.8))
-            }
-            
-            Spacer()
-            
-            Image(systemName: "chevron.right")
-                .foregroundStyle(.white.opacity(0.6))
-        }
-        .padding()
-        .background(Color(red: 19/255, green: 64/255, blue: 46/255), in: RoundedRectangle(cornerRadius: 12))
     }
 }
 
