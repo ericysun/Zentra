@@ -74,18 +74,39 @@ struct playerPage: View {
                 }
                 .padding(.horizontal, 20)
                 
-                // Play/Pause button
-                Button(action: {
-                    if isPlaying {
-                        pauseAudio()
-                    } else {
-                        playAudio()
+                // Playback controls
+                HStack(spacing: 40) {
+                    // Backward 10 seconds
+                    Button(action: {
+                        skipBackward()
+                    }) {
+                        Image(systemName: "gobackward.10")
+                            .font(.system(size: 30))
+                            .foregroundStyle(.white)
                     }
-                }) {
-                    Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
-                        .font(.system(size: 80))
-                        .foregroundStyle(.white)
-                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
+                    
+                    // Play/Pause button
+                    Button(action: {
+                        if isPlaying {
+                            pauseAudio()
+                        } else {
+                            playAudio()
+                        }
+                    }) {
+                        Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                            .font(.system(size: 80))
+                            .foregroundStyle(.white)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
+                    }
+                    
+                    // Forward 10 seconds
+                    Button(action: {
+                        skipForward()
+                    }) {
+                        Image(systemName: "goforward.10")
+                            .font(.system(size: 30))
+                            .foregroundStyle(.white)
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -150,6 +171,22 @@ struct playerPage: View {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
         return String(format: "%d:%02d", minutes, seconds)
+    }
+    
+    private func skipForward() {
+        if let player = audioPlayer {
+            let newTime = min(player.currentTime + 10, duration)
+            player.currentTime = newTime
+            currentTime = newTime
+        }
+    }
+    
+    private func skipBackward() {
+        if let player = audioPlayer {
+            let newTime = max(player.currentTime - 10, 0)
+            player.currentTime = newTime
+            currentTime = newTime
+        }
     }
 }
 
