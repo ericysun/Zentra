@@ -1,6 +1,7 @@
 # Zentra
 ## An Open-Source Meditation App for iOS
-<img width="1360" height="987" alt="ZentraDemoBanner" src="https://github.com/user-attachments/assets/1fdd188d-09d4-45c2-9925-a8725b982340" />
+<img width="898" height="651" alt="zentraBannerDemoAd" src="https://github.com/user-attachments/assets/94c463a7-e5d1-48e4-bc49-0c9175a059d0" />
+
 
 ## Features
 -  Free, unlimited, interruption-free meditation sessions.
