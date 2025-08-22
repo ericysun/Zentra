@@ -11,7 +11,7 @@
 -  No ads, no subscriptions, and no paywalls. Just peace.
 
 ## App Demo
-https://github.com/user-attachments/assets/37567afe-0e95-41d8-88d7-677505daf694
+https://github.com/user-attachments/assets/efd7ca30-1c91-4f8d-9e29-88b315722352
 
 ## User Journey
 -  Homescreen displays a randomly chosen motivational quotes, and a list of meditation types to choose from.
