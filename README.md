@@ -14,9 +14,10 @@
 https://github.com/user-attachments/assets/efd7ca30-1c91-4f8d-9e29-88b315722352
 
 ## User Journey
--  Homescreen displays a randomly chosen motivational quotes, and a list of meditation types to choose from.
+-  Homescreen displays a randomly chosen motivational quote to inspire the user, and a list of meditation types for the user to choose from.
 -  Once the user chooses a mediation type, they are taken to a screen where there are multiple recordings of that type to choose to listen to.
 -  Once the user selects a recording, they are taken to a player screen and can relax in the meditation audio.
+-  They can play/pause, and skip forward and backward in the audio.
 
 ## Installation
 You can install and run Zentra on your iPhone using the Xcode App Simulator.
