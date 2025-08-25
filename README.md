@@ -40,5 +40,9 @@ You can install and run Zentra on your iPhone using the Xcode App Simulator.
 - Press ⌘R to build and run the app on your device.
 - Choose "Trust" when your iPhone asks you to trust the developer certificate.
 
+Troubleshooting Tips:
+- Confirm the USB cable to connect your Mac and iPhone is capable of transferring data+power, not just power.
+- Update Xcode and iPhone to the newest software versions.
+
 # Feedback: Bug and Feature Suggestion
 https://bit.ly/ZentraFeedback
